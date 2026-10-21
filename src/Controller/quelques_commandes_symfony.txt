@@ -1,0 +1,200 @@
+
+
+
+
+
+
+
+
+
+QUELQUES COMMANDES SYMFONY
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+C.R.P. Paul et Liliane Guinot 
+Promotion : DWWM 2024-2025 
+Formateur: Georges Igor PALAKOT
+ 
+
+QUELQUES COMMANDES SYMFONY
+
+1.	COMPOSER
+•	Téléchargement de Composer / http://getcomposer.org/ 
+•	Installation
+	$ pup -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+ php -r "if (hash_file('sha384', 'composer-setup.php') ===  'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a45029 2b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt';  unlink('composer-setup.php'); } echo PHP_EOL;"
+ $ php composer-setup.php 
+ $ php -r "unlink('composer-setup.php');"
+
+Update
+$ composer update
+$  composer update --ignore-platform-reqs
+
+1.	Requirements
+$ symfony check:requirements
+
+2.	INSTALLATION 
+A.	Projet  “Micro service, Console ou API”
+# Utilisation de Symfony CLI
+symfony new nom_du_projet
+# Utilisation de Composer
+	composer create-project symfony/skeleton nom_du_projet
+
+B.	Projet  “web”
+	# Utilisation de Symfony CLI
+symfony new --webapp nom_du_projet
+# Utilisation de Composer
+composer create-project symfony/skeleton nom_du_projet
+cd nom_du_projet
+composer require webapp
+
+C.	Choix de version
+# Utilisation de Symfony CLI
+symfony new --webapp nom_du_projet --version=lts
+# ou
+symfony new --webapp nom_du_projet --version=6.4
+
+# Utilisation de Composer
+composer create-project symfony/skeleton nom_du_projet 6.4.*
+cd nom_du_projet
+composer require webapp
+
+
+
+D.	Verification version
+symfony console about
+
+3.	CLI / Symfony
+$  composer require symfony/console 
+$ Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+$  iwr -useb get.scoop.sh | iex
+$  scoop install symfony-cli
+
+4.	SERVER
+A.	Lancer le serveur web de développement :
+$ php bin/console server:run
+$ php bin/console server:run –d # demarrer le server en mode demon
+$ symfony server:start –d
+$ symfony open:local #ouvrir directement sur le Navigateur
+$ php -S 127.0.0.0.1:8000 -t public  
+	Stopper le serveur web de développement :
+$ CTRL + C
+	Security
+     $ symfony server:ca:install –force
+     $ symfony server:start –no-tls #Retour en http simple
+	Server Running:
+      $ symfony server:list
+
+	Stopper le serveur web de développement :
+     $ CTRL + C
+	Gestion DNS / sous Domain
+     $ symfony proxy:domain:attach nom_site
+     $ symfony proxy:start  #sans oublier la config du Proxy
+5.	ROUTES
+A.	Installation de routes en annotation
+$ composer require annotations
+B.	Afficher la liste des routes disponibles :
+$ php bin/console debug:router
+6.	CONTROLLERS
+$  php bin/console make:controller HomeController
+$  Symfony Console List Make
+7.	DATA BASES
+	Installer l'ORM Doctrine
+  $ composer require orm –dev
+  $ composer req orm –dev
+A.	Création Base de Données
+       $ doctrine:database:create 
+  $ php bin/console doctrine:database:update
+8.	ENTITY
+A.	php bin/console make:entity
+B.	doctrine:mapping:info 
+9.	EVENEMENTS
+Afficher la liste des events et leur degré de priorité :
+$  php bin/console debug:event-dispatcher
+10.	FIXTURES
+$  composer require --dev orm-fixtures
+$  php bin/console make:fixtures 
+$  php bin/console doctrine:fixtures:load 
+$   php bin/console doctrine:fixtures:load –help
+$  php bin/console doctrine:fixtures:load --group=group1
+$  php bin/console doctrine:fixtures:load --group=group1 --group=group2
+$  php bin/console doctrine:fixtures:load --group=UserFixtures
+$  php bin/console doctrine:fixtures:load --purge-exclusions=user
+$  php bin/console  d:s:d --force && php bin/console  d:s:u --force && symfony php bin/console  d:f:l --group=group1 -n
+
+11.	REPOSITORY
+12.	MIGRATIONS
+$  php bin/console make :migration
+$  php bin/console d:m :m
+13.	FORMULAIRES
+
+14.	ADMINISTRATION
+$  easy_admin : faciliter l’interaction avec la BD, installons easy_admin :
+$  composer req admin
+Configuration de la page conﬁg/packages/easy_admin.yaml 
+Puis visitez : localhost:8000/admin (http ://localhost :8000/admin)
+
+14.	Security
+$  php bin/console make :auth 
+$  php bin/console security:encode-password
+
+
+15.	SERVICES
+A.	Afficher la liste des services disponibles dans le container :
+$ php bin/console debug:container
+B.	Afficher la correspondance entre les services et le nom des classes PHP qui peuvent être utilisés en « type hinting » :
+    $   php bin/console debug:autowiring
+
+16.	Test
+-	Faire 1 Test
+   $  symfony console make:test
+   $  php bin/console make:unit-test
+$ symfony console  make:functional-test   // Creates a new functional test class
+
+-	Typs de Test
+	[TestCase       ] basic PHPUnit tests
+	  [KernelTestCase ] basic tests that have access to Symfony services
+	  [WebTestCase    ] to run browser-like scenarios, but that don't execute JavaScript code
+	  [ApiTestCase    ] to run API-oriented scenarios
+	  [PantherTestCase] to run e2e scenarios, using a real-browser or HTTP client and a real web server
+-	Executer 1 Test
+$   php bin/phpunit #Tous les test
+$  php bin/phpunit tests/Form #Tous les test du Dossier Form
+$ php bin/phpunit --filter UtilisateurUnitTest –testdox
+$  php bin/phpunit tests/Form/UserTypeTest.php #Fichier UserTypeTest.php
+-	Couverture de Test
+$  php bin/console phpunit  --coverage-html templates\test\coverage
+$   ./vendor/bin/phpunit --coverage-html templates/test/coverage    
+
+17.	  MISE EN PRODUCTION
+A.	Installation Composer :
+$   curl -sS https://getcomposer.org/installer | /usr/bin/php7.4-cli
+B.	Mise à jour Vendor
+/usr/bin/php7.4-cli composer.phar update
+
+18.	 API
+https://symfony.com/doc/current/the-fast-track/fr/26-api.html#installing-api-platform 
+
+ [ApiResource(
+    +    operations: [
+    +        new Get(normalizationContext: ['groups' => 'conference:item']),
+    +        new GetCollection(normalizationContext: ['groups' => 'conference:list'])
+    +    ],
+    +    order: ['year' => 'DESC', 'city' => 'ASC'],
+    +    paginationEnabled: false,
+    +)]
+
+
+
