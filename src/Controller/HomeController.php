@@ -13,21 +13,12 @@ use Symfony\Component\HttpFoundation\JsonResponse;
     #[Route('/index', name: 'home_index')]
     #[Route('/default', name: 'default')]
 
-    public function index(): Response
+    public function index(): JsonResponse
     {
-        return $this->render('home/index.html.twig', [
-            'controller_name' => 'HomeController',
-            'noms'=> 'Palakot',
+        return $this->json([
+            'message' => 'Bienvenue sur la page d\'accueil !',
         ]);
     }
-
-    public function apropos(): Response
-    {
-        return $this->render('home/apropos.html.twig', [
-            'controller_name' => 'HomeController',
-        ]);
-    }
-
 
 
    // La route login pour l'accueil est dans Routes.yaml

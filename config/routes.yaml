@@ -15,51 +15,55 @@ accueil:
     controller: App\Controller\HomeController::index
     methods: GET
 
-index:
-    path: /index
+home:
+    path: /home
     controller: App\Controller\HomeController::index
     methods: GET
 
-apropos:
-    path: /apropos
-    controller: App\Controller\HomeController::apropos
-    methods: GET
-
-enregistrement:
-    path: /enregistrement
-    controller: App\Controller\EnregistrementController::index
-    methods: GET
-
-users:
-    path: /users
-    controller: App\Controller\UserController::index
-    methods: GET
-
-usersId:
-    path: /users/{id}
-    controller: App\Controller\UserController::show
-    methods: GET
-
-membre:
-    path: /membre
-    controller: App\Controller\MembreController::index
-    methods: GET
-    
-membreId:
-    path: /membre/{id}
-    controller: App\Controller\MembreController::afficher
+accueil2:
+    path: /accueil
+    controller: App\Controller\HomeController::index
     methods: GET
 
 login:
     path: /login
-    controller: App\Controller\SecurityController::login
+    controller: App\Controller\HomeController::login
     methods: GET
 
 logout:
     path: /logout
-    controller: App\Controller\SecurityController::logout
+    controller: App\Controller\HomeController::logout
     methods: GET
 
+connexion:
+    path: /connexion
+    controller: App\Controller\HomeController::connexion
+    methods: GET
+
+enregistrement:
+    path: /enregistrement
+    controller: App\Controller\HomeController::enregistrement
+    methods: GET
+
+users:
+    path: /users
+    controller: App\Controller\HomeController::users
+    methods: GET
+
+usersId:
+    path: /users/{id}
+    controller: App\Controller\HomeController::usersId
+    methods: GET
+
+membre:
+    path: /membre
+    controller: App\Controller\HomeController::membre
+    methods: GET
+    
+membreId:
+    path: /membre/{id}
+    controller: App\Controller\HomeController::membreId
+    methods: GET
 
 
 
