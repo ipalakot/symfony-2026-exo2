@@ -17,6 +17,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
     {
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
+            'noms'=> 'Palakot',
         ]);
     }
 
