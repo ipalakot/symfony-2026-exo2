@@ -10,8 +10,8 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 
   class HomeController extends AbstractController
 {
-    #[Route('/index', name: 'home_index')]
-    #[Route('/default', name: 'default')]
+    //#[Route('/index', name: 'home_index')]
+    //#[Route('/default', name: 'default')]
 
     public function index(): Response
     {
