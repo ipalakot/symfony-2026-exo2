@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>
-      {% block title %} Exercice {% endblock %} 
-    </title>
+      {% block title %} Exercice {% endblock%} 
+  </title>
 
      {% block javascripts %}
        <script src="https://cdn.jsdelivr.net/npm/idiomorph"></script> 
@@ -19,38 +19,29 @@
 
   <body>
 
-
-
+    
     {% block body %}
 
-      {% block header %}  
-        <hr>
+         <hr style="width:100%; height:10px; background-color:#1B4F72 ">
+              <div w3-include-html="nav.html"></div>
+            <nav>
+            <ul>
+                <li><a href="#">  Accueil</a></li>
+                <li><a href="#"> A Propos </a></li>
+                <li><a href="#"> Enregistrement </a></li>
+                <li><a href="#"> Utilisateurs </a></li>
+                <li><a href="#"> Membres </a></li>
+                <li><a href="#"> Connexion </a></li>
+                <li><a href="#">  Nous Contacter </a> </li>
+            </ul>
+          </nav>
+         <hr style="width:100%; height:10px; background-color:#1B4F72 ">
       {% endblock %}
-
-
-      {% block navigation %}  
-
-
-      
-      
-      {% endblock %}
-
-
-    {% endblock %}
-
-
+    
   </body>
 
   <footer>
-
-      {% block footer %} 
-      <pre>
-            Association Paul Guinot
-            24-26 bd Chastenet de Géry 94814 Villejuif Cedex
-            Tél : 01 46 78 01 00
-      </pre>
-            
-      {% endblock %}
+    {% block footer %}  {% endblock %}
 
   </footer>
 </html>
