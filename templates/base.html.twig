@@ -20,7 +20,7 @@
   <body>
 
     
-    {% block body %}
+    {% block navigation %}
 
          <hr style="width:100%; height:10px; background-color:#1B4F72 ">
               <div w3-include-html="nav.html"></div>
@@ -32,13 +32,12 @@
             <a href="#">membre</a>
             <a href="#">connexion</a>
         </nav>
-
-
-
-
-
          <hr style="width:100%; height:10px; background-color:#1B4F72 ">
       {% endblock %}
+
+       {% block body %}
+
+       {% endblock %}
     
   </body>
 
