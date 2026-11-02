@@ -1,20 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
-
-    {% block head %}
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="">
       <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
       <meta name="generator" content="Hugo 0.84.0">
     
-        { % block title %}
-            <title>Mon Site </title>
-        {% endblock %}
+        
+            <title>
+              { % block title %} Mon Site  { % endblock %}
+            </title>
+       
 
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('build/app.css') }}">
 
             <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/jumbotron/">
 
@@ -40,30 +39,26 @@
 
             {% block javascripts %}
             
-            {% endblock %}
-
-      {% endblock %}
-
-
-    
+            {% endblock %}    
   </head>
+
   <body>
         {% block navigation %}
 
-         <hr style="width:100%; height:10px; background-color:#1B4F72 ">
-              <div w3-include-html="nav.html"></div>
-          <nav aria-label="Navigation principale">
-            <a href="#">accueil</a>
-            <a href="#">à-propos</a>
-            <a href="#">enregistrement</a>
-            <a href="#">utilisateurs</a>
-            <a href="#">membre</a>
-            <a href="#">connexion</a>
-        </nav>
+          <hr style="width:100%; height:10px; background-color:#1B4F72 ">
+                <div w3-include-html="nav.html"></div>
+            <nav aria-label="Navigation principale">
+              <a href="#">accueil</a>
+              <a href="#">à-propos</a>
+              <a href="#">enregistrement</a>
+              <a href="#">utilisateurs</a>
+              <a href="#">membre</a>
+              <a href="#">connexion</a>
+            </nav>
          <hr style="width:100%; height:10px; background-color:#1B4F72 ">
       {% endblock %}
 
-      
+
     {% block body %}
         
         <main>
