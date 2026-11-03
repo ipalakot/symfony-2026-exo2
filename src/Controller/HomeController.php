@@ -25,6 +25,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
     {
         return $this->render('home/apropos.html.twig', [
             'controller_name' => 'HomeController',
+            'liste'=> ['hayate', 'Romain', 'Corentin', 'malick', 'Qasim', 'Florian', 'Moussa', 'Yassine', 'Nassim', 'Mouad', 'Youssef', 'Mohamed', 'Hicham', 'Sofiane', 'Soufiane', 'Abdelkader', 'Abdelhakim'],
         ]);
     }
 
