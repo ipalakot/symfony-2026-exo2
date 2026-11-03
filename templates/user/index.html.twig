@@ -1,13 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'base2.html.twig' %}
 
 {% block title %}Hello UserController!{% endblock %}
 
+
+{% block navigation %}  
+    {% include 'menu/menu1.html.twig'%}
+{% endblock %}
+
+
 {% block body %}
-
 <div class="example-wrapper">
-
     <h2>utilisateurs</h2>
-
 </div>
 {% endblock %}
 

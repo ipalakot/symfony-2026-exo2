@@ -2,7 +2,13 @@
 
 {% block title %} / Index {% endblock %} 
 
- 
+{% block navigation %}  
+    {% include 'menu/menu1.html.twig'%}
+{% endblock %}
+
+{% block body %}  
+    {% include 'menu/main.html.twig'%}
+{% endblock %}
 
 
 
