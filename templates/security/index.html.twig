@@ -1,6 +1,6 @@
 {% extends 'base2.html.twig' %}
 
-{% block title %} login {% endblock %}
+{% block title %} {{ parent() }} Connexion {% endblock %}
 
 
 {% block navigation %}  
@@ -9,10 +9,12 @@
 
 
 {% block body %}
-
-<div class="example-wrapper">
-    <h2>Connexion</h2>
-</div>
+<!-- container -->
+	<div class="container">
+        <div class="example-wrapper">
+            <h5>Connexion /</h5>
+        </div>
+    </div>
 {% endblock %}
 
 

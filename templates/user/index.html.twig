@@ -1,6 +1,6 @@
 {% extends 'base2.html.twig' %}
 
-{% block title %}Hello UserController!{% endblock %}
+{% block title %}{{ parent() }} Utillisateurs {% endblock %}
 
 
 {% block navigation %}  
@@ -9,9 +9,13 @@
 
 
 {% block body %}
-<div class="example-wrapper">
-    <h2>utilisateurs</h2>
-</div>
+<!-- container -->
+    <div class="container">
+
+        <div class="example-wrapper">
+            <h4>Les Utilisateurs</h4>
+        </div>
+    </div>
 {% endblock %}
 
 

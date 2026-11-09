@@ -16,13 +16,13 @@
     <table class="table-bordered">
         
         <tr>
-            <th></th>
+            <th>Etudiants</th>
             <th>Analyse</th>
             <th>Algorithme</th>
             <th>Programmation</th>
             <th>Recherche</th>
-            <th>MOYENNE</th>
-            <th>DECISION</th>
+            <th><b>Moyenne </b></th>
+            <th>Appréciations </th>
         </tr>
 
         {% for etudiant in etudiants %}  
@@ -34,7 +34,7 @@
                 <td> {{ etudiant.algorithme }} </td>
                 <td> {{ etudiant.programmation }} </td>
                 <td> {{ etudiant.recherche }} </td>
-                <td> {{ moyenne }} </td>
+                <td> <b>{{ moyenne }}</b> </td>
                 <td>         
                 {% if moyenne >= 12 %}
                 Acquis !

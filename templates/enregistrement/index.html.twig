@@ -1,6 +1,6 @@
 {% extends 'base2.html.twig' %}
 
-{% block title %} Enregistrement {% endblock %}
+{% block title %} {{ parent() }} Enregistrement {% endblock %}
 
 {% block navigation %}  
     {% include 'menu/menu2.html.twig'%}
@@ -15,8 +15,8 @@
 	<div class="container">
 
 		<ol class="breadcrumb">
-			<li><a href="index.html">Home</a></li>
-			<li class="active">About</li>
+			<li><a href="{{ path('index')}}">Home </a></li>
+			<li class="active">  / About</li>
 		</ol>
 
 		<div class="row">

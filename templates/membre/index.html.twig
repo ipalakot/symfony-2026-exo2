@@ -1,6 +1,6 @@
 {% extends 'base2.html.twig' %}
 
-{% block title %}Hello MembreController!{% endblock %}
+{% block title %}{{ parent() }} Membre{% endblock %}
 
 {% block navigation %}  
     {% include 'menu/menu2.html.twig'%}
@@ -8,29 +8,33 @@
 
 {% block body %}
 
-<div class="example-wrapper">
+<!-- container -->
+    <div class="container">
 
-{# Boucle For sur la list edes Etudiants du Controller MembreController #}
-<h5> <u> Liste des étudinats 2 </u> </h5>
-    
-    <table>
-        <tr>
-            <th> Noms </th>
-            <th> - Prennoms </th>
-        </tr>
-        {% for etudiant in etudiants %}      
-            <tr>
-                <td> {{ etudiant.nom }} </td>
-                <td> - {{ etudiant.prenom }} </td> 
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="2">Aucun étudiant trouvé.</td>
-            </tr>
-            {% endfor %}
-    </table>
+        <div class="example-wrapper">
 
-</div>
+        {# Boucle For sur la list edes Etudiants du Controller MembreController #}
+        <h5> <u> Liste des étudinats 2 </u> </h5>
+            
+            <table>
+                <tr>
+                    <th> Noms </th>
+                    <th> - Prennoms </th>
+                </tr>
+                {% for etudiant in etudiants %}      
+                    <tr>
+                        <td> {{ etudiant.nom }} </td>
+                        <td> - {{ etudiant.prenom }} </td> 
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="2">Aucun étudiant trouvé.</td>
+                    </tr>
+                    {% endfor %}
+            </table>
+
+        </div>
+    </div>
 
 
 

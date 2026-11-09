@@ -34,7 +34,7 @@ final class MembreController extends AbstractController
             ['prenom' => 'Pierre', 'analyse' => 10, 'algorithme' => 8, 'programmation' => 10, 'recherche' => 10],
             ['prenom' => 'Paul', 'analyse' => 11, 'algorithme' => 10, 'programmation' => 11, 'recherche' => '11'],
             ['prenom' => 'Jacques', 'analyse' => 9, 'algorithme' => 15, 'programmation' => 14, 'recherche' => 9],
-            ['prenom' => 'Delphine', 'analyse' => 15, 'algorithme' => 8, 'programmation' => 17, 'recherche' => 4]
+            ['prenom' => 'Delphine', 'analyse' => 15, 'algorithme' => 18, 'programmation' => 17, 'recherche' => 14]
         ];
 
 
