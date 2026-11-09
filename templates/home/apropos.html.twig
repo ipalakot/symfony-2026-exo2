@@ -1,20 +1,14 @@
-{% extends 'base2.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %} {{ parent() }} apropos {% endblock %} 
 
 
 {% block navigation %}  
-    {% include 'menu/menu2.html.twig'%}
+    {% include 'menu/menu.html.twig'%}
 {% endblock %}
 
-
-{% block brand %}   
-	{{ parent() }} about
-{% endblock %}
 
 {% block body %}
-
-{% include 'menu/post.html.twig'%}
 
 
 {% endblock %}
