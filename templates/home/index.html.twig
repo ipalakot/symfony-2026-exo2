@@ -1,13 +1,21 @@
-{% extends 'base.html.twig' %}
+{% extends 'base2.html.twig' %}
 
-{% block body %}
+{% block title %} {{ parent() }} Index{% endblock %} 
 
-   
-    <h1>/Accueil</h1>
+{% block navigation %}  
+    {% include 'menu/menu2.html.twig'%}
+{% endblock %}
 
-    utilisateur : {{ noms }}
+{% block body %}  
+    {% include 'menu/main2.html.twig'%}
+{% endblock %}
+
+
+
+
+
+
 
 
 
     
-{% endblock %}
