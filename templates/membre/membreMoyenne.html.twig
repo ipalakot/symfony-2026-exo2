@@ -1,0 +1,56 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}Hello MembreController!{% endblock %}
+
+{% block navigation %}  
+    {% include 'menu/menu2.html.twig'%}
+{% endblock %}
+
+{% block body %}
+    
+    <h2>Notes / Etudiants</h2>
+
+
+<div class="example-wrapper">
+
+    <table class="table-bordered">
+        
+        <tr>
+            <th></th>
+            <th>Analyse</th>
+            <th>Algorithme</th>
+            <th>Programmation</th>
+            <th>Recherche</th>
+            <th>MOYENNE</th>
+            <th>DECISION</th>
+        </tr>
+
+        {% for etudiant in etudiants %}  
+        {% set moyenne = (etudiant.analyse + etudiant.algorithme + etudiant.programmation + etudiant.recherche) / 4 %}
+        
+            <tr>
+                <td> {{ etudiant.prenom }} </td>
+                <td> {{ etudiant.analyse }} </td>
+                <td> {{ etudiant.algorithme }} </td>
+                <td> {{ etudiant.programmation }} </td>
+                <td> {{ etudiant.recherche }} </td>
+                <td> {{ moyenne }} </td>
+                <td>         
+                {% if moyenne >= 12 %}
+                Acquis !
+                {% elseif moyenne >= 10 %}
+                En Cours.
+                {% else %}
+                Non acquis.
+                {% endif %} </td>
+            </tr>
+
+            {% endfor %}
+
+    </table>
+
+</div>
+
+{% endblock %}
+
+

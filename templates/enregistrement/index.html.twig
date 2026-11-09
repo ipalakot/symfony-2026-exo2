@@ -1,16 +1,67 @@
-{% extends 'base.html.twig' %}
+{% extends 'base2.html.twig' %}
 
-{% block title %}Hello EnregistrementController!{% endblock %}
+{% block title %} Enregistrement {% endblock %}
+
+{% block navigation %}  
+    {% include 'menu/menu2.html.twig'%}
+{% endblock %}
+
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
 
 <div class="example-wrapper">
 
-    <h1>Enregistrement</h1>
+<!-- container -->
+	<div class="container">
+
+		<ol class="breadcrumb">
+			<li><a href="index.html">Home</a></li>
+			<li class="active">About</li>
+		</ol>
+
+		<div class="row">
+			
+			<!-- Article main content -->
+			<article class="col-sm-9 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">Nous Contacter</h1>
+				</header>
+				
+				<p>
+					Nous serions ravis d’échanger avec vous. Vous souhaitez collaborer avec nous ? Remplissez le formulaire ci-dessous en nous donnant quelques précisions sur votre projet ; je reviendrai vers vous dans les plus brefs délais. Prévoyez un délai de quelques jours pour ma réponse..
+				</p>
+				<br>
+					<form>
+						<div class="row">
+							<div class="col-sm-4">
+								<input class="form-control" type="text" placeholder="Name">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="text" placeholder="Email">
+							</div>
+							<div class="col-sm-4">
+								<input class="form-control" type="text" placeholder="Phone">
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm-12">
+								<textarea placeholder="Type your message here..." class="form-control" rows="9"></textarea>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm-6">
+								<label class="checkbox"><input type="checkbox"> Sign up for newsletter</label>
+							</div>
+							<div class="col-sm-6 text-right">
+								<input class="btn btn-action" type="submit" value="Send message">
+							</div>
+						</div>
+					</form>
+
+			</article>
+			<!-- /Article -->
 
 </div>
 {% endblock %}

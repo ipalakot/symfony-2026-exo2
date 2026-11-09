@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+  <head>
+    <title>
+      {% block title %} Exercice {% endblock%} 
+  </title>
 
-        {% block javascripts %}
-        {% endblock %}
+     {% block javascripts %}
+       <script src="https://cdn.jsdelivr.net/npm/idiomorph"></script> 
+     {% endblock %}
+     
+     {% block stylesheets %} 
+        <link href="style.css" rel="stylesheet" type="text/css">
 
-        {% set frankenphp_hot_reload = app.request.server.get('FRANKENPHP_HOT_RELOAD') %}
-        {% if frankenphp_hot_reload %}
-        <meta name="frankenphp-hot-reload:url" content="{{ frankenphp_hot_reload }}">
-        <script src="https://cdn.jsdelivr.net/npm/idiomorph"></script>
-        <script src="https://cdn.jsdelivr.net/npm/frankenphp-hot-reload/+esm" type="module"></script>
-        {% endif %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+     {% endblock %}
+  
+   
+  </head>
+
+  <body>
+
+    
+    {% block navigation %}
+
+         <hr style="width:100%; height:10px; background-color:#1B4F72 ">
+              <div w3-include-html="nav.html"></div>
+          <nav aria-label="Navigation principale">
+            <a href="#">accueil</a>
+            <a href="#">à-propos</a>
+            <a href="#">enregistrement</a>
+            <a href="#">utilisateurs</a>
+            <a href="#">membre</a>
+            <a href="#">connexion</a>
+        </nav>
+         <hr style="width:100%; height:10px; background-color:#1B4F72 ">
+      {% endblock %}
+
+       {% block body %}
+
+       {% endblock %}
+    
+  </body>
+
+  <footer>
+    {% block footer %}  {% endblock %}
+
+  </footer>
 </html>

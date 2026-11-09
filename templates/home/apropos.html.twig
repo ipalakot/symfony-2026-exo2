@@ -1,7 +1,18 @@
-{% extends 'base.html.twig' %}
+{% extends 'base2.html.twig' %}
+
+{% block title %} /apropos {% endblock %} 
+
+
+{% block navigation %}  
+    {% include 'menu/menu2.html.twig'%}
+{% endblock %}
+
+
+
 
 {% block body %}
 
-    <h1>/A Propos de notre Site</h1>
+{% include 'menu/post.html.twig'%}
+
 
 {% endblock %}
