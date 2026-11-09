@@ -33,25 +33,6 @@
 </div>
 
 
-<br> <br>
-<h5> <u> Exercice 8 </u> </h5>
-    
-    <table>
-        <tr>
-            <th> Noms </th>
-            <th> - Prennoms </th>
-        </tr>
-        {% for etudiant in etudiants %}      
-            <tr>
-                <td> {{ etudiant.nom }} </td>
-                <td> - {{ etudiant.prenom }} </td> 
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="2">Aucun étudiant trouvé.</td>
-            </tr>
-            {% endfor %}
-    </table>
 
-</div>
+
 {% endblock %}
