@@ -27,6 +27,18 @@ class Utilisateur
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTime $datenaissance = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $genre = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $telephone = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $mail = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $login = null;
+
 
     public function getId(): ?int
     {
@@ -77,6 +89,54 @@ class Utilisateur
     public function setDatenaissance(\DateTime $datenaissance): static
     {
         $this->datenaissance = $datenaissance;
+
+        return $this;
+    }
+
+    public function getGenre(): ?string
+    {
+        return $this->genre;
+    }
+
+    public function setGenre(string $genre): static
+    {
+        $this->genre = $genre;
+
+        return $this;
+    }
+
+    public function getTelephone(): ?string
+    {
+        return $this->telephone;
+    }
+
+    public function setTelephone(string $telephone): static
+    {
+        $this->telephone = $telephone;
+
+        return $this;
+    }
+
+    public function getMail(): ?string
+    {
+        return $this->mail;
+    }
+
+    public function setMail(string $mail): static
+    {
+        $this->mail = $mail;
+
+        return $this;
+    }
+
+    public function getLogin(): ?string
+    {
+        return $this->login;
+    }
+
+    public function setLogin(string $login): static
+    {
+        $this->login = $login;
 
         return $this;
     }

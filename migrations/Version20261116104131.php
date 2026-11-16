@@ -28,4 +28,5 @@ final class Version20261116104131 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->addSql('DROP TABLE utilisateur');
     }
+    
 }
