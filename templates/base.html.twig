@@ -1,48 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>
-      {% block title %} Exercice {% endblock%} 
-  </title>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"    content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Integration du template Progressus dans Symfony 7">
+	<meta name="author"      content="IPlkt ">
 
-     {% block javascripts %}
-       <script src="https://cdn.jsdelivr.net/npm/idiomorph"></script> 
-     {% endblock %}
-     
-     {% block stylesheets %} 
-        <link href="style.css" rel="stylesheet" type="text/css">
+	<title>	{% block title %} DWWM2  {% endblock %} </title>
 
-     {% endblock %}
-  
-   
-  </head>
+	{% block stylesheets %}
+		<link rel="shortcut icon" href="{{ asset('assets/images/gt_favicon.png') }}">
+		<link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+		<link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/bootstrap-theme.css') }}" media="screen">
+		<link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
 
-  <body>
+	{% endblock %}
+</head>
 
-    
-    {% block navigation %}
+{% block navigation %}  
+	{% include 'menu/menu.html.twig'%}
+{% endblock %}
 
-         <hr style="width:100%; height:10px; background-color:#1B4F72 ">
-              <div w3-include-html="nav.html"></div>
-          <nav aria-label="Navigation principale">
-            <a href="#">accueil</a>
-            <a href="#">à-propos</a>
-            <a href="#">enregistrement</a>
-            <a href="#">utilisateurs</a>
-            <a href="#">membre</a>
-            <a href="#">connexion</a>
-        </nav>
-         <hr style="width:100%; height:10px; background-color:#1B4F72 ">
-      {% endblock %}
+<body>
 
-       {% block body %}
+	<!-- Header -->
 
-       {% endblock %}
-    
-  </body>
+	<!-- /Body -->
 
-  <footer>
-    {% block footer %}  {% endblock %}
+	{% block body %} {% endblock %}
 
-  </footer>
+
+	
+
+	<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+{% block javascripts %}
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+	<script src="{{asset('assets/js/headroom.min.js')}}"></script>
+	<script src="{{asset('assets/js/jQuery.headroom.min.js')}}"></script>
+	<script src="{{asset('assets/js/template.js')}}"></script>
+{% endblock %}
+</body>
 </html>
