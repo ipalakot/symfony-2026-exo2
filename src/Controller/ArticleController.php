@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Attribute\Route;
 #[Route('/article')]
 final class ArticleController extends AbstractController
 {
-    #[Route(name: 'article_index', methods: ['GET'])]
+    // #[Route(name: 'article_index', methods: ['GET'])]
     public function index(ArticleRepository $articleRepository): Response
     {
         return $this->render('article/index.html.twig', [
@@ -22,7 +22,7 @@ final class ArticleController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'article_show', methods: ['GET'])]
+    //#[Route('/{id}', name: 'article_affichage', methods: ['GET'])]
     public function afficher(Article $article): Response
     {
         return $this->render('article/affichage.html.twig', [

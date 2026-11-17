@@ -25,6 +25,16 @@ apropos:
     controller: App\Controller\HomeController::apropos
     methods: GET
 
+article_index:
+    path: /articles
+    controller: App\Controller\ArticleController::index
+    methods: GET
+
+article_affichage:
+    path: /articles{id}
+    controller: App\Controller\ArticleController::afficher
+    methods: GET
+
 enregistrement:
     path: /enregistrement
     controller: App\Controller\EnregistrementController::index

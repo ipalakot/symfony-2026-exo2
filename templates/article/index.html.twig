@@ -1,45 +1,57 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Article index{% endblock %}
+{% block title  %}{{ parent() }} | liste des articles{% endblock %}
+
+{% block navigation %}  
+    {% include 'menu/menu.html.twig'%}
+{% endblock %}
 
 {% block body %}
-    <h1>Article index</h1>
+<br><br>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Titre</th>
-                <th>Date</th>
-                <th>Categorie</th>
-                <th>Auteur</th>
-                <th>Prix</th>
-                <th>Resume</th>
-                <th>Commentaire</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for article in articles %}
-            <tr>
-                <td>{{ article.id }}</td>
-                <td>{{ article.titre }}</td>
-                <td>{{ article.date ? article.date|date('Y-m-d') : '' }}</td>
-                <td>{{ article.categorie }}</td>
-                <td>{{ article.auteur }}</td>
-                <td>{{ article.prix }}</td>
-                <td>{{ article.resume }}</td>
-                <td>{{ article.commentaire }}</td>
-                <td>
-                   
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="9">Aucun article pour le moment </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+
+<!-- container -->
+    <div class="container">
+
+        <div class="example-wrapper">
+            <h4>Nos Articles </h4> 
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Titre</th>
+                            <th>Date</th>
+                            <th>Categorie</th>
+                            <th>Auteur</th>
+                            <th>Prix</th>
+                            <th>Resume</th>
+                            <th>Commentaire</th>
+                            <th>actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for article in articles %}
+                        <tr>
+                            <td>{{ article.id }}</td>
+                            <td>{{ article.titre }}</td>
+                            <td>{{ article.date ? article.date|date('Y-m-d') : '' }}</td>
+                            <td>{{ article.categorie }}</td>
+                            <td>{{ article.auteur }}</td>
+                            <td>{{ article.prix }}</td>
+                            <td>{{ article.resume }}</td>
+                            <td>{{ article.commentaire }}</td>
+                            <td>
+                            
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="9">Aucun article pour le moment </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+    </div>
 
 {% endblock %}
