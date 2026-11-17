@@ -1,0 +1,161 @@
+symfony console make:entity
+
+
+ Class name of the entity to create or update (e.g. GentlePizza):
+ > Article
+Article
+
+ created: src/Entity/Article.php
+ created: src/Repository/ArticleRepository.php
+ 
+ Entity generated! Now let's add some fields!
+ You can always add more fields later manually or by re-running this command.
+
+ New property name (press <return> to stop adding fields):
+ > titre
+
+ Field type (enter ? to see all types) [string]:  > 
+
+ Field length [255]: > 
+
+ Can this field be null in the database (nullable) (yes/no) [no]: > 
+
+ updated: src/Entity/Article.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > date
+
+ Field type (enter ? to see all types) [string]:
+ > date
+date
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ > 
+
+ updated: src/Entity/Article.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > categorie
+
+ Field type (enter ? to see all types) [string]:
+ > 
+
+
+ Field length [255]:
+ > 
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ > auteur
+
+ updated: src/Entity/Article.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > auteur
+
+ Field type (enter ? to see all types) [string]:
+ > 
+
+
+ Field length [255]:
+ > 
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ > 
+
+ updated: src/Entity/Article.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > prix
+
+ Field type (enter ? to see all types) [string]:
+ > ?
+?
+
+Main Types
+  * string or ascii_string
+  * text
+  * boolean
+  * integer or smallint or bigint
+  * float or smallfloat
+  * decimal
+  * number
+
+Relationships/Associations
+  * relation a wizard will help you build the relation
+  * ManyToOne
+  * OneToMany
+  * ManyToMany
+  * OneToOne
+
+Array/Object Types
+  * json or json_object
+  * binary
+  * blob
+
+Date/Time Types
+  * datetime or datetime_immutable
+  * datetimetz or datetimetz_immutable
+  * date or date_immutable
+  * dateinterval
+  * time or time_immutable
+
+Other Types
+  * enum
+  * uuid
+  * guid
+  * ulid
+  * datetime_utc
+  * datetime_utc_immutable
+  * jsonb
+  * jsonb_object
+  * simple_array
+
+
+ Field type (enter ? to see all types) [string]:
+ > float
+float
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ > 
+
+ updated: src/Entity/Article.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > resume
+
+ Field type (enter ? to see all types) [string]:
+ > 
+
+
+ Field length [255]:
+ > 
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ > yes
+
+ updated: src/Entity/Article.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > commentaire
+
+ Field type (enter ? to see all types) [string]:
+ > text
+text
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ > yes
+
+ updated: src/Entity/Article.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > 
+
+
+           
+  Success! 
+           
+
+ Next: When you're ready, create a migration with php bin/console make:migration
+ 
+
+ipalakot@CDA2FOR MINGW64 /c/wamp64/www/symfony/2627/exercices_v2 (Progressus)
