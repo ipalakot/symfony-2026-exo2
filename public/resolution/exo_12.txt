@@ -1,0 +1,46 @@
+Correction:
+
+Remote: origin  https://github.com/ipalakot/symfony-2026-exo2.git
+Branch : Progressus
+log: git log --oneline
+	3b6b052 menu Article2
+	c240dfd menu Article
+	8127bd3 ArticleController
+	01af702 Class Article
+	6cabb87 Migration
+	a49cd3e Migration
+	93829d8 Migration
+	d1a17ca creation entity
+
+Resolution
+1) Création de la table Article  (voir le fichier ./public/resolution/_creation_article.txt 
+	//-> symfony console make:entity 
+	Class name of the entity to create or update (e.g. GentlePizza):
+ 	//-> Article
+	
+	created: src/Entity/Article.php
+ 	created: src/Repository/ArticleRepository.php
+ 
+ 	Entity generated! Now let's add some fields!
+ 	You can always add more fields later manually or by re-running this command.
+	
+	 New property name (press <return> to stop adding fields):
+ 	> titre
+2) Preparation de la Migration:
+	//-> symfony console make:migration
+3) Migration de la class Article:
+	//-> symfony console doctrine:migration:migrate
+4) Création controller Article
+	//-> symfony console make:controller ArticleController
+	src/Controlle/ArticleController.php
+ 5) Vue de la liste des articles
+	 ./Template/article/index.html.twig
+
+6) Création du menu index 
+	./Template/article/index.html.twig
+	./config/routes.yaml
+	article_index:
+
+
+	
+		
