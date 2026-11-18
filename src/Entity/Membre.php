@@ -24,7 +24,7 @@ class Membre
     private ?string $fonction = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
-    private ?\DateTime $date_emploi = null;
+    private ?\DateTime $datemploi = null;
 
     public function getId(): ?int
     {
@@ -67,14 +67,14 @@ class Membre
         return $this;
     }
 
-    public function getDateEmploi(): ?\DateTime
+    public function getDatEmploi(): ?\DateTime
     {
-        return $this->date_emploi;
+        return $this->datemploi;
     }
 
-    public function setDateEmploi(?\DateTime $date_emploi): static
+    public function setDatEmploi(?\DateTime $datemploi): static
     {
-        $this->date_emploi = $date_emploi;
+        $this->datemploi = $datemploi;
 
         return $this;
     }
