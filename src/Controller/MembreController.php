@@ -18,7 +18,6 @@ final class MembreController extends AbstractController
             ['prenom' => 'Charlie', 'nom' => 'Dubois '],
         ];
 
-
         return $this->render('membre/index.html.twig', [
             'controller_name' => 'MembreController',
             'prenom2' => 'Moussa',  // Ajout d'une variable supplémentaire
