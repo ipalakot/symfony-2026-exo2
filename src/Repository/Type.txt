@@ -1,0 +1,11 @@
+Type Doctrine	Type PHP	Type en base de données (MySQL)
+string	        string	    VARCHAR
+integer	        integer	    INT
+boolean	        boolean	    BOOLEAN
+date	        \DateTime	DATETIME
+datetime	    \DateTime	TIMESTAMP
+blob	        stream      resource	BLOB
+text     
+float    
+decimal   
+number

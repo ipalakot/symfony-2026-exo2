@@ -1,10 +1,15 @@
-{% extends 'base2.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %} {{ parent() }} Connexion {% endblock %}
 
 
+{% block brand %}   
+	{{ parent() }} connexion
+    <hr style="width:15%; height:1px; background-color:#1B4F72 ">
+{% endblock %}
+
 {% block navigation %}  
-    {% include 'menu/menu2.html.twig'%}
+    {% include 'menu/menu.html.twig'%}
 {% endblock %}
 
 
