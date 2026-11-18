@@ -1,13 +1,17 @@
-{% extends 'base2.html.twig' %}
+{% extends 'base.html.twig' %}
 
-{% block title %} {{ parent() }} Index{% endblock %} 
+{% block title %} {{ parent() }} | Index{% endblock %} 
 
 {% block navigation %}  
-    {% include 'menu/menu2.html.twig'%}
+    {% include 'menu/menu.html.twig'%}
 {% endblock %}
 
 {% block body %}  
-    {% include 'menu/main2.html.twig'%}
+    {% include 'tools/header.html.twig'%}
+    {# {% include 'menu/main.html.twig'%} #}
+    {% include 'tools/intro.html.twig'%}
+    
+
 {% endblock %}
 
 

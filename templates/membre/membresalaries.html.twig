@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} salaries {% endblock %}
+
+
+{% block navigation %}  
+    {% include 'menu/menu.html.twig'%}
+{% endblock %}
+
+{% block brand %}   
+	{{ parent() }} users
+    <hr style="width:100%; height:1px; background-color:#1B4F72 ">
+{% endblock %}
+
+
+{% block body %}
+<!-- container -->
+
+    <div class="container">
+
+        <div class="example-wrapper">
+        <br><br><br><br><br>
+            <h4>Membres Salariés</h4> 
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Noms</th>
+                        <th>Prenoms</th>
+                        <th>Fonction</th>
+                        <th>Embauche</th>
+                        
+                    </tr>
+                </thead>
+            <tbody>
+                {% for membre in membres %}
+                <tr>
+                <td> {{ membre.id }} </td>
+                <td> {{ membre.noms }} </td>
+                <td> {{ membre.prenoms  }} </td>
+                <td> {{ membre.fonction  }} </td>
+                <td> {{ membre.datemploi | date("d/m/Y") }} </td>
+                    <br>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="4">Aucun Membre salarié pour le moment</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+    </table>
+    </div>
+    </div>
+{% endblock %}
+
+
