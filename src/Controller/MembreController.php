@@ -52,7 +52,7 @@ final class MembreController extends AbstractController
     
     public function membreSalarie(MembreRepository $membreRepository): Response
     {
-        return $this->render('membre/membreSalarie.html.twig', [
+        return $this->render('membre/membreSalaries.html.twig', [
             'membres' => $membreRepository->findAll(),
         ]);
     }

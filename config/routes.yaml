@@ -47,7 +47,7 @@ membre:
 
 membre-salarie:
     path: /membre/salarie
-    controller: App\Controller\MembreController::index
+    controller: App\Controller\MembreController::membreSalarie
     methods: GET
 
 membreMoyenne:

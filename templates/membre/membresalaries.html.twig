@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MembreController!{% endblock %}
+
+{% block navigation %}  
+    {% include 'menu/menu.html.twig'%}
+{% endblock %}
+
+{% block body %}
+    
+    <h2>Notes / Etudiants</h2>
+
+
+<div class="example-wrapper">
+
+    <table class="table-bordered">
+        
+        <tr>
+            <th>id</th>
+            <th>Noms</th>
+            <th>Prenoms</th>
+            <th>Fonction</th>
+            <th>Emba</th>
+            <th><b>Moyenne </b></th>
+            <th>Appréciations </th>
+        </tr>
+
+        {% for membre in membres %}  
+     
+            <tr>
+                <td> {{ membre.id }} </td>
+                <td> {{ membre.noms }} </td>
+                <td> {{ membre.prenoms  }} </td>
+                <td> {{ membre.fonction  }} </td>
+                <td> {{ membre.date }} </td>
+
+                {% else %}
+                Aucun Membre salarié pour le momment
+                {% endif %} </td>
+            </tr>
+
+            {% endfor %}
+
+    </table>
+
+</div>
+
+{% endblock %}
+
+
