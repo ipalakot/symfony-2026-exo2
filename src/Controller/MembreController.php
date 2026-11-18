@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+use App\Entity\Membre;
+use App\Repository\MembreRepository;
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -11,7 +14,6 @@ final class MembreController extends AbstractController
     #[Route('/membre', name: 'app_membre')]
     public function index(): Response
     {
-
     $etudiants = [
             ['prenom' => 'Hayate', 'nom' => 'El Garri'],
             ['prenom' => 'Romain', 'nom' => 'Giaretti'],
@@ -25,10 +27,8 @@ final class MembreController extends AbstractController
         ]);
     }
 
-
     public function moyenne(): Response
     {
-
         $etudiants = [
             ['prenom' => 'Pierre', 'analyse' => 10, 'algorithme' => 8, 'programmation' => 10, 'recherche' => 10],
             ['prenom' => 'Paul', 'analyse' => 11, 'algorithme' => 10, 'programmation' => 11, 'recherche' => '11'],
@@ -47,5 +47,13 @@ final class MembreController extends AbstractController
     public function membreId(): Response
     {
         return $this->redirectToRoute('app_membre');
+    }
+
+    
+    public function membreSalarie(MembreRepository $membreRepository): Response
+    {
+        return $this->render('membre/membreSalarie.html.twig', [
+            'membres' => $membreRepository->findAll(),
+        ]);
     }
 }
