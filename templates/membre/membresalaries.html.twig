@@ -32,11 +32,11 @@
                 <td> {{ membre.noms }} </td>
                 <td> {{ membre.prenoms  }} </td>
                 <td> {{ membre.fonction  }} </td>
-                <td> {{ membre.date }} </td>
+                <td> {{ membre.date_emploi | date("d/m/Y") }} </td>
 
                 {% else %}
-                Aucun Membre salarié pour le momment
-                {% endif %} </td>
+                    Aucun Membre salarié pour le momment
+               
             </tr>
 
             {% endfor %}
