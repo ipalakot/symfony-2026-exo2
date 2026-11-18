@@ -19,7 +19,7 @@
     <div class="container">
 
         <div class="example-wrapper">
-        <br><br><br><br><br><br>
+        <br><br><br><br><br>
             <h4>Membres Salariés</h4> 
             <table class="table">
                 <thead>
@@ -28,6 +28,7 @@
                         <th>Noms</th>
                         <th>Prenoms</th>
                         <th>Fonction</th>
+                        <th>Embauche</th>
                         
                     </tr>
                 </thead>
@@ -38,7 +39,7 @@
                 <td> {{ membre.noms }} </td>
                 <td> {{ membre.prenoms  }} </td>
                 <td> {{ membre.fonction  }} </td>
-                <td> {{ membre.date_emploi | date("d/m/Y") }} </td>
+                <td> {{ membre.datemploi | date("d/m/Y") }} </td>
                     <br>
                 </tr>
                 {% else %}
