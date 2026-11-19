@@ -11,23 +11,20 @@ class MembreFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        // $product = new Product();
-
         //Initialiser les données de l'entité Membre
+        for ($i = 0; $i < 14; $i++) {
+            $membre = new Membre();
+            $membre->setNoms('Paul');
+            $membre->setPrenoms('');
+            $membre->setFonction('');
+            $membre->setDatEmploi(new \DateTime());
 
-        $membre = new Membre();
-
-        $membre->setNoms('PAUl');
-        $membre->setPrenoms('Romain');
-        $membre->setFonction('Développeur');
-        $membre->setDatEmploi(new \DateTime());
-
-        // $manager->persist($product);
-        // Enregistrer l'entité Membre dans la base de données
+        // Preparer l'Enregistrement l'entité Membre dans la base de données
         $manager->persist($membre);
+        }
 
-        // Vous pouvez ajouter d'autres membres ici si nécessaire
-    
+        // Enregistrer les Utilisateurs
         $manager->flush();
     }
 }
+

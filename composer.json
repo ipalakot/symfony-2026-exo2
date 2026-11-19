@@ -7,8 +7,8 @@
         "php": ">=8.2",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "doctrine/doctrine-bundle": "^3.4",
-        "doctrine/doctrine-migrations-bundle": "^4.0",
+        "doctrine/doctrine-bundle": "^3.4.2",
+        "doctrine/doctrine-migrations-bundle": "^4.0.1",
         "doctrine/orm": "^3.8",
         "symfony/asset": "7.4.*",
         "symfony/console": "7.4.*",
@@ -21,6 +21,7 @@
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^4.3",
+        "friendsofphp/php-cs-fixer": "^3.95",
         "symfony/maker-bundle": "^1.68"
     },
     "config": {
