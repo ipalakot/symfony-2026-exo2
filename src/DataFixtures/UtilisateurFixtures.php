@@ -27,7 +27,6 @@ class UtilisateurFixtures extends Fixture
 
         // Preparer l'enregistrement dans la BDD
             $manager->persist($utilisateur);
-
             }
 
     // Enregistrer dans BDD
